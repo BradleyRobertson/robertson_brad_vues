@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="css/main.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <title>Introduction to vue!</title>
+</head>
+<body>
+
+  <main id="app">
+    <h3>{{welcomeMessage}}</h3>
+
+    <ul>
+      <li v-for="veggies in veggiesonFarm">
+      <p v-on:click="logClicked"> {{ veggies.name }} is {{ veggies.flavour }} </p>
+    </li>
+    </ul>
+
+    <p v-if="hasVue">
+      {{ bigMessage }}
+    </p>
+  </main>
+    <script src="js/main.js"></script>
+</body>
+</html>
